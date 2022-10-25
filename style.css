@@ -22,8 +22,6 @@ body{
 }
 
 
-
-
 header{
     font-family: 'Mulish', sans-serif;
 
@@ -126,6 +124,11 @@ main{
     padding-left: 10px;
     font-size: 20px;
 }
+#search::placeholder {
+    font-size: 15px;
+    text-align: center;
+}
+
 #search-button{
     height: 30px;
     background-color:#D9D9D9 ;
@@ -148,8 +151,12 @@ main{
     font-size: 25px;
     align-items: center;
     box-shadow:0 5px 10px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19) ;
-
+    cursor: pointer;
 }
+.item:hover{
+    background-color: #cce6e6;
+}
+
 .item li{
     height: 40px;
 }
@@ -185,6 +192,91 @@ main::-webkit-scrollbar {
   }
 
 
+
+.serieWindowArea {
+    position:fixed;
+    left:0;
+    top:0;
+    bottom:0;
+    right:0;
+    background-color:rgba(255, 255, 255, 0.5);
+    display:none;
+    transition: all ease .2s;
+    justify-content: center;
+    align-items: center;
+}
+.serieWindowBody{
+    position: relative;
+    width:80%;
+    height: 90%;
+    background-color:#FFF;
+    border-radius:10px;
+    box-shadow:0px 0px 15px #999;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-y:auto;
+    font-family: 'Montserrat', sans-serif;
+
+}
+.content-video{
+    text-align: center;
+    display: block;
+}
+.content-text{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+    background-color: #dbecec;
+    border-radius: 20px;
+    width: 80%;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    box-shadow:0 5px 10px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19) ;
+}
+
+.tittle{
+    font-size: 35px;
+}
+.content-description{
+    margin-top: 25px;
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+     line-height: 22px; 
+}
+.close{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+.line{
+    margin-top: 8px;
+    width: 90%;
+    height: 2px;
+    border: 20px;
+    background-color: black;
+}
+iframe{
+    border-radius: 15px;
+}
+
+
+
+
+
+@media (max-width: 1575px){
+    .item{
+        font-size: 21.5px;
+    }
+}
+
 @media (max-width: 1440px){
 
     .item{
@@ -214,11 +306,21 @@ main::-webkit-scrollbar {
         padding-left: 89px;
     }
 }
+@media (max-width: 1250px){
+    .item{
+        font-size: 16px;
+    }
+}
+@media(max-width:1100px){
+    .item{
+        font-size: 14.5px;
+    }
+}
 
-@media (max-width: 1023px){
+@media (max-width: 1030px){
     .item{
         min-height: 100px;
-        font-size: 15px;
+        font-size: 14px;
     }
     .item li{
         height: 20px;
