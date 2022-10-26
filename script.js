@@ -83,7 +83,7 @@ function show(array){
             </ul>`
 
             //setando um atributo "data-key" para usa-lo ao abrir o modal e preencher os dados da janela com a serie selecionada
-            serieItem.setAttribute("data-key", index);
+            serieItem.setAttribute("data-key", item.id);
 
 
             //ABRINDO O MODAL
